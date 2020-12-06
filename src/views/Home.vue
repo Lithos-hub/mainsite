@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Header id="header" />
+    <AboutMe id="AboutMe" />
+    <Portfolio id="portfolio" />
+    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "../components/Header";
+import AboutMe from "../components/AboutMe";
+import Portfolio from "../components/Portfolio";
+import Footer from "../components/Footer";
+
+import { scrollfade } from "../hooks/scrollfade";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    AboutMe,
+    Portfolio,
+    Footer,
+  },
+  mounted() {
+    scrollfade();
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
+}
+</style>
