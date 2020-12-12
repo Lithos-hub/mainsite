@@ -7,6 +7,7 @@
       <p id="about-text">
        <ul class="text-center" style="list-style-type:none;">
        <li>- All images used on this website are non copyrighted.</li>
+       <li>- The development time for the designs and applications in my portfolio (until the first version to be deployed) was approximately 3 weeks.</li>
        <li>- For the design I used Vuetify and Bootstrap with custom CSS/SCSS.</li>
        <li>- Each app in my portfolio is documented with details about its functionality and features.</li>
        <li>- I will be updating my designs and applications with improvements and additions of features and new functionalities.</li>
@@ -33,8 +34,67 @@ export default {};
 <style lang="scss" scoped>
 @import "src/scss/variables";
 
+
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
+  #about-title {
+  font-size: 10em;
+  text-align: center;
+  font-family: $style2;
+  letter-spacing: 40px;
+  background: url(../assets/img/background-2.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#about-text {
+  font-size: 18px;
+}
+
+#linke-icon {
+    font-size: 3em;
+  color: #0A66C2;
+  margin-right: 200px;
+}
+
+#email-icon {
+  font-size: 3em;
+  color: #DF4D47;
+  margin-left: 200px;
+}
+#via-linke {
+  margin-right: 350px;
+}
+
+#linke-icon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+#email-icon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  #mailto:hover {
+    text-decoration: none;
+  }
+
+  #tolinke:hover{
+    text-decoration: none;
+
+}
+
+}
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+
 #about-title {
-  font-size: 20em;
+  font-size: $desktop;
   text-align: center;
   font-family: $style2;
   letter-spacing: 40px;
@@ -80,6 +140,9 @@ export default {};
   #tolinke:hover{
     text-decoration: none;
 
-  }
+
+}
+
+}
 
 </style>

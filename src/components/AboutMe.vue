@@ -19,7 +19,7 @@ I'm Carlos. I am a chocolate lover <i class="em em-chocolate_bar" aria-role="pre
 <br><br>
 Below you will find a series of projects that I have been doing where I test myself with the handling of design, layout and web programming technologies. Some of those technologies are:
 <br><br>
-<ul class="ml-5" style="list-style-type:none;">
+<ul  style="list-style-type:none;">
 <li>HTML<v-icon id="html-icon">mdi-language-html5</v-icon></li>
 <hr class="bg-info">
 <li>CSS<v-icon id="css-icon">mdi-language-css3</v-icon></li>
@@ -62,12 +62,19 @@ export default {
 @import 'src/scss/variables';
 
 
+
+
+
+
+// ******* MOBILE RESPONSIVE ******* // 
+@media only screen and (min-width: 360px) {
+
 #AboutMe {
-  margin-top: 500px;
+  margin-top: 300px;
 }
 
 #aboutme-title {
-  font-size: 20em;
+  font-size: $mobile;
   text-align: center;
   font-family: $style2;
   letter-spacing: 40px;
@@ -79,6 +86,184 @@ background-position: top;
 }
 
 #left-col {
+  display: none;
+  height: 600px;
+  background: url(../assets/img/section1-1.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#right-col {
+  background-color: #ffffff;
+  height: 1300px;
+}
+
+#about-text {
+    font-size: 14px;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+}
+
+#html-icon{
+  color: #E45923 !important;
+  font-size: 2em;
+}
+
+#css-icon {
+  color: #1864A0 !important;
+    font-size: 2em;
+}
+
+#sass-icon {
+  color: #C96195 !important;
+    font-size: 2em;
+}
+
+#js-icon {
+  color: #EFD81D !important;
+    font-size: 2em;
+}
+
+#bootstrap-icon {
+  color: #533B78 !important;
+    font-size: 2em;
+}
+
+#firebase-icon {
+  color: #F7C428 !important;
+    font-size: 2em;
+}
+
+#vue-icon {
+  color: #3FB27F !important;
+    font-size: 2em;
+}
+
+#vuetify-icon {
+  color:#79C1F7 !important;
+    font-size: 2em;
+}
+
+#api-icon {
+    color:#b1277e !important;
+    font-size: 2em;
+}
+
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {   
+
+#AboutMe {
+  margin-top: 500px;
+}
+
+#aboutme-title {
+  font-size: $laptop;
+  text-align: center;
+  font-family: $style2;
+  letter-spacing: 40px;
+  background: url(../assets/img/section-titles.jpg);
+background-attachment: fixed;
+background-position: top;
+ -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#left-col {
+  display: inline;
+  height: 1700px;
+  background: url(../assets/img/section1-1.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#right-col {
+  background-color: #ffffff;
+  height: 1700px;
+}
+
+#about-text {
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0 auto;
+}
+
+#html-icon{
+  color: #E45923 !important;
+  font-size: 2em;
+}
+
+#css-icon {
+  color: #1864A0 !important;
+    font-size: 2em;
+}
+
+#sass-icon {
+  color: #C96195 !important;
+    font-size: 2em;
+}
+
+#js-icon {
+  color: #EFD81D !important;
+    font-size: 2em;
+}
+
+#bootstrap-icon {
+  color: #533B78 !important;
+    font-size: 2em;
+}
+
+#firebase-icon {
+  color: #F7C428 !important;
+    font-size: 2em;
+}
+
+#vue-icon {
+  color: #3FB27F !important;
+    font-size: 2em;
+}
+
+#vuetify-icon {
+  color:#79C1F7 !important;
+    font-size: 2em;
+}
+
+#api-icon {
+    color:#b1277e !important;
+    font-size: 2em;
+}
+  
+}
+
+
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+
+
+#AboutMe {
+  margin-top: 500px;
+}
+
+#aboutme-title {
+  font-size: $desktop;
+  text-align: center;
+  font-family: $style2;
+  letter-spacing: 40px;
+  background: url(../assets/img/section-titles.jpg);
+background-attachment: fixed;
+background-position: top;
+ -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#left-col {
+  display: inline;
   height: 1300px;
   background: url(../assets/img/section1-1.jpg);
   background-position: bottom;
@@ -142,6 +327,8 @@ background-position: top;
 #api-icon {
     color:#b1277e !important;
     font-size: 2em;
+}
+  
 }
 
 </style>
